@@ -1,0 +1,13 @@
+* {
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  background-color: #edb879;
+}
+.container {
+  max-width: 960px;
+}
