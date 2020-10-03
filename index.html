@@ -4,36 +4,102 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-
       <header>
+        <div id="top"></div>
         <div class="inner">
-          <h1><a href="/"><span class="ebay-red">e</span><span class="ebay-blue">b</span><span class="ebay-yellow">a</span><span class="ebay-green">y</span></a>/h1>
-        </div>  
+          <h1>
+            <a href="/"
+              ><span class="ebay-red">e</span><span class="ebay-blue">b</span
+              ><span class="ebay-yellow">a</span
+              ><span class="ebay-green">y</span></a
+            >
+          </h1>
+        </div>
       </header>
       <main>
         <div class="inner">
-
-
           <section id="product">
-            <h3>Withings Activite smart watch</h3>
             <div class="product-images">
-              <div><img src=""/></div>
-              <div class="slider"></div>
+              <div class="product-title">
+                <h3>Withings Activite smart watch</h3>
+                <p id="views">178 per day</p>
+                <p id="countdown">10 days left</p>
+              </div>
+              <div class="main-image">
+                <img src="watch.jpg" alt="picture of the watch" />
+              </div>
+              <ul class="slider">
+                <a href="#" class="arrow"><</a>
+                <li><img src="watch.jpg" alt="picture of the watch" /></li>
+                <li><img src="watch.jpg" alt="picture of the watch" /></li>
+                <li><img src="watch.jpg" alt="picture of the watch" /></li>
+                <li><img src="watch.jpg" alt="picture of the watch" /></li>
+                <li><img src="watch.jpg" alt="picture of the watch" /></li>
+                <a href="#" class="arrow">></a>
+              </ul>
             </div>
             <div class="product-description">
-
+              <div class="olive-shop">
+                <div><img src="" /></div>
+                <div>
+                  <p>OLIVE SHOP</p>
+                  <div>98.5 %</div>
+                  <p><span>Follow</span> Other Item</p>
+                </div>
+              </div>
+              <div>
+                <p>New with Tags</p>
+                <p>Color</p>
+                <p>Quantity 2 available</p>
+                <div class="price">
+                  <div>
+                    <p>429.99 $</p>
+                    <p>Price</p>
+                    <p>BUY IT NOW</p>
+                  </div>
+                  <div>
+                    <a>Add to Cart</a>
+                    <a>Add to Watch list</a>
+                    <a>Add to Collection</a>
+                  </div>
+                </div>
+                <div class="details">
+                  <div>
+                    <p>USPS First Class Mail International</p>
+                    <p>Shipping Service</p>
+                  </div>
+                  <div>
+                    <p>15 Days (June 16)</p>
+                    <p>Item delivered</p>
+                  </div>
+                  <div>
+                    <p>South Carolina, USA</p>
+                    <p>Item Location</p>
+                  </div>
+                  <div>
+                    <p>eBay Money Back</p>
+                    <p>60 days, free return</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
           <section id="other-products">
             <h6>People who viewed this item also viewed</h6>
-            <a href="left">icon</a>
-            <ul>
+
+            <ul class="slider">
+              <a href="#" class="arrow"><</a>
               <li>
-                <img src=""/>
+                <div><img src="watch.jpg" alt="picture of the watch" /></div>
                 <div>
                   <h4>Withings Activite Pop</h4>
                   <p>The new face of activity tracking</p>
@@ -42,16 +108,7 @@
                 </div>
               </li>
               <li>
-                <img src=""/>
-                <div>
-                  <h4>Withings Activite Pop</h4>
-                  <p>The new face of activity tracking</p>
-                  <p>149.95 $</p>
-                  <a href="#">BUY IT NOW</a>
-                </div>                
-              </li>
-              <li>
-                <img src=""/>
+                <div><img src="watch.jpg" alt="picture of the watch" /></div>
                 <div>
                   <h4>Withings Activite Pop</h4>
                   <p>The new face of activity tracking</p>
@@ -59,14 +116,23 @@
                   <a href="#">BUY IT NOW</a>
                 </div>
               </li>
+              <li>
+                <div><img src="watch.jpg" alt="picture of the watch" /></div>
+                <div>
+                  <h4>Withings Activite Pop</h4>
+                  <p>The new face of activity tracking</p>
+                  <p>149.95 $</p>
+                  <a href="#">BUY IT NOW</a>
+                </div>
+              </li>
+              <a href="#" class="arrow">></a>
             </ul>
-            <a href="right"></a>
           </section>
 
           <section id="product-specifics">
             <div class="tabs-nav">
               <nav>
-                <a href="#">Item Specifics</a>
+                <a href="#" class="current">Item Specifics</a>
                 <a href="#">Shipping and payments</a>
               </nav>
               <a href="#">Report Item</a>
@@ -88,65 +154,84 @@
               </div>
               <ul>
                 <li>
-                  <img src="url"/>
+                  <img src="url" />
                   <p>New with Tags</p>
                   <p>Condition</p>
                 </li>
                 <li>
-                  <img src="url"/>
+                  <img src="url" />
                   <p>USPS First Class Mail</p>
                   <p>Domestic Shipping Service</p>
                 </li>
                 <li>
-                  <img src="url"/>
+                  <img src="url" />
                   <p>USPS First Class Mail International</p>
                   <p>International Shipping Service</p>
                 </li>
                 <li>
-                  <img src="url"/>
+                  <img src="url" />
                   <p>2-5 Business Days</p>
                   <p>Item Ship Within</p>
                 </li>
                 <li>
-                  <img src="url"/>
+                  <img src="url" />
                   <p>Factory Sealed</p>
                   <p>Packaging</p>
                 </li>
                 <li>
-                  <img src="url"/>
+                  <img src="url" />
                   <p>60 Days Money Back</p>
                   <p>Return Policy</p>
                 </li>
               </ul>
             </div>
-            <div>
-              <p class="title">French design. SwissMade.</p>
-              <p>Designed in Paris, Activite is manufactured with great care in Switzerland and bears the coveted "SwissMade" label.</p>
-              <p>Manufactured in Locle, within the Swiss watchmakers valley, the dials come in two colors:<br/>
-                A sleek black pattern with an orange accent and a sophisticated white face with a blue accent. 
-                Both dials feature a pair of dazzling hands.</p>
-            </div>
-            <div>
-              <p class="title">An impenetrable case</p>
-              <p>Protected by a scratch-proof domed sapphire glass, the 5 ATM water-resistant case is made from a stainless 
-                316L alloy steel resilient to time and corrosion.</p>
-            </div>
-            <div>
-              <p class="title">Optimize your sleep</p>
-              <p>Whatever you wear to bed, accessorize with Activite. In the morning you will have a detailed picture of your night. 
-                Activite can also wake you up with a silent vibrating alarm.</p>
-            </div>
-            <div>
-              <p class="title">Stop counting laps</p>
-              <p>Water resistant<br/>Activite is water resistant to 50 meters.</p>
-              <p>Extra silicone watch strap<br/>Easily change straps when you exercise with the quick release spring bars.</p>
+            <div class="blocks">
+              <div>
+                <p class="title">French design. SwissMade.</p>
+                <p>
+                  Designed in Paris, Activite is manufactured with great care in
+                  Switzerland and bears the coveted "SwissMade" label.
+                </p>
+                <p>
+                  Manufactured in Locle, within the Swiss watchmakers valley,
+                  the dials come in two colors:<br />
+                  A sleek black pattern with an orange accent and a
+                  sophisticated white face with a blue accent. Both dials
+                  feature a pair of dazzling hands.
+                </p>
+              </div>
+              <div>
+                <p class="title">An impenetrable case</p>
+                <p>
+                  Protected by a scratch-proof domed sapphire glass, the 5 ATM
+                  water-resistant case is made from a stainless 316L alloy steel
+                  resilient to time and corrosion.
+                </p>
+              </div>
+              <div>
+                <p class="title">Optimize your sleep</p>
+                <p>
+                  Whatever you wear to bed, accessorize with Activite. In the
+                  morning you will have a detailed picture of your night.
+                  Activite can also wake you up with a silent vibrating alarm.
+                </p>
+              </div>
+              <div>
+                <p class="title">Stop counting laps</p>
+                <p>
+                  Water resistant<br />Activite is water resistant to 50 meters.
+                </p>
+                <p>
+                  Extra silicone watch strap<br />Easily change straps when you
+                  exercise with the quick release spring bars.
+                </p>
+              </div>
             </div>
           </section>
-
-        </div>      
+        </div>
       </main>
       <footer>
-        <a>icon BACK TO TOP</a>
+        <a href="#top" class="blue">^ BACK TO TOP</a>
         <nav>
           <ul>
             <li>About eBay</li>
@@ -162,16 +247,17 @@
           </ul>
         </nav>
         <div>
-          <p><span class="ebay-red">e</span><span class="ebay-blue">b</span><span class="ebay-yellow">a</span><span class="ebay-green">y</span> MONEY BACK GUARANTEE</p>
-          <p>Get the item you ordered or your money back on virtually all items</p>
-          <a href="#">LEARN MORE</a>
+          <p>
+            <span class="ebay-red">e</span><span class="ebay-blue">b</span
+            ><span class="ebay-yellow">a</span
+            ><span class="ebay-green">y</span> MONEY BACK GUARANTEE
+          </p>
+          <p>
+            Get the item you ordered or your money back on virtually all items
+          </p>
+          <a href="#" class="blue">LEARN MORE</a>
         </div>
       </footer>
-
-
-
-
-
     </div>
   </body>
 </html>
