@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;400&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/b0179f73c6.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -16,120 +20,214 @@
         <div id="top"></div>
         <div class="inner">
           <h1>
-            <a href="/"
-              ><span class="ebay-red">e</span><span class="ebay-blue">b</span
-              ><span class="ebay-yellow">a</span
-              ><span class="ebay-green">y</span></a
-            >
+            <a href="/">
+              <span class="ebay-red">e</span>
+              <span class="ebay-blue">b</span>
+              <span class="ebay-yellow">a</span>
+              <span class="ebay-green">y</span>
+            </a>
           </h1>
+          <a href="#"><i class="fas fa-th"></i></a>
+          <input type="search" />
+          <a href="#" id="profile" title="profile">
+            <img class="profile-image" src="profile.jpg" alt="profile-image" />
+            <i class="fas fa-angle-down"></i>
+          </a>
+          <a href="#" title="notifications">
+            <i class="fas fa-bell"></i>
+          </a>
+          <a href="#" title="shopping-cart">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+          <a href="#" id="sort" title="sort">
+            <i class="fas fa-align-left"></i>
+          </a>
         </div>
       </header>
+
       <main>
-        <div class="inner">
-          <section id="product">
+        <section id="product">
+          <div class="inner">
             <div class="product-images">
               <div class="product-title">
                 <h3>Withings Activite smart watch</h3>
-                <p id="views">178 per day</p>
-                <p id="countdown">10 days left</p>
+                <p>
+                  <span id="views">178 per day</span>
+                  <span id="countdown">10 days left</span>
+                </p>
               </div>
               <div class="main-image">
                 <img src="watch.jpg" alt="picture of the watch" />
               </div>
               <ul class="slider">
-                <a href="#" class="arrow"><</a>
+                <a href="#" class="arrow"
+                  ><i class="fas fa-angle-left blue"></i
+                ></a>
                 <li><img src="watch.jpg" alt="picture of the watch" /></li>
                 <li><img src="watch.jpg" alt="picture of the watch" /></li>
                 <li><img src="watch.jpg" alt="picture of the watch" /></li>
                 <li><img src="watch.jpg" alt="picture of the watch" /></li>
                 <li><img src="watch.jpg" alt="picture of the watch" /></li>
-                <a href="#" class="arrow">></a>
+                <a href="#" class="arrow"
+                  ><i class="fas fa-angle-right blue"></i
+                ></a>
               </ul>
             </div>
             <div class="product-description">
               <div class="olive-shop">
-                <div><img src="" /></div>
                 <div>
+                  <img
+                    class="profile-image"
+                    src="profile.jpg"
+                    alt="profile-image"
+                  />
+                </div>
+                <div class="text">
                   <p>OLIVE SHOP</p>
-                  <div>98.5 %</div>
-                  <p><span>Follow</span> Other Item</p>
+                  <div class="progress">
+                    <div class="progress-bar"><div id="progress"></div></div>
+                    <span>98.5 %</span>
+                  </div>
+                  <p>
+                    <span class="follow">Follow</span>
+                    <span class="dot"></span>
+                    <span> Other Item</span>
+                  </p>
                 </div>
               </div>
-              <div>
-                <p>New with Tags</p>
-                <p>Color</p>
-                <p>Quantity 2 available</p>
-                <div class="price">
-                  <div>
-                    <p>429.99 $</p>
-                    <p>Price</p>
-                    <p>BUY IT NOW</p>
+              <div class="product-details">
+                <p><i class="fas fa-box"></i> New with Tags</p>
+                <p>
+                  <span>Color</span>
+                  <span class="product-colors">
+                    <button id="white" class="active" type="button">
+                      <span></span>
+                    </button>
+                    <button id="black" type="button"><span></span></button>
+                    <button id="blue" type="button"><span></span></button>
+                    <button id="red" type="button"><span></span></button>
+                    <button id="orange" type="button"><span></span></button>
+                    <button id="turquoise" type="button"><span></span></button>
+                  </span>
+                </p>
+                <p>
+                  <span>Quantity</span>
+                  <input type="number" />
+                  <span>2 available</span>
+                </p>
+                <div class="product-price-container">
+                  <div class="product-price">
+                    <p class="blue"><span class="blue">429.99</span>$</p>
+                    <span>Price</span>
+                    <button type="button">
+                      <i class="fas fa-check"></i>
+                      <span>BUY IT NOW</span>
+                    </button>
                   </div>
-                  <div>
-                    <a>Add to Cart</a>
-                    <a>Add to Watch list</a>
-                    <a>Add to Collection</a>
+                  <div class="product-actions">
+                    <div>
+                      <button type="button">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                      </button>
+                      <button type="button">
+                        <i class="fas fa-eye"></i> Add to Watch list
+                      </button>
+                      <button type="button">
+                        <i class="fas fa-folder"></i> Add to Collection
+                      </button>
+                    </div>
                   </div>
                 </div>
-                <div class="details">
+                <div class="shipping-details">
                   <div>
-                    <p>USPS First Class Mail International</p>
+                    <div class="row">
+                      <div class="icon-wrapper">
+                        <i class="fas fa-plane"></i>
+                      </div>
+                      <a href="#">+</a>
+                      <a href="#" class="more" title="Learn more">?</a>
+                    </div>
+                    <p class="title">USPS First Class Mail International</p>
                     <p>Shipping Service</p>
                   </div>
                   <div>
-                    <p>15 Days (June 16)</p>
+                    <div class="row">
+                      <div class="icon-wrapper">
+                        <i class="fas fa-calendar"></i>
+                      </div>
+                      <a href="#">+</a>
+                      <a href="#" class="more" title="Learn more">?</a>
+                    </div>
+                    <p class="title">15 Days (June 16)</p>
                     <p>Item delivered</p>
                   </div>
                   <div>
-                    <p>South Carolina, USA</p>
-                    <p>Item Location</p>
+                    <div class="row">
+                      <div class="icon-wrapper"><span>USA</span></div>
+                    </div>
+                    <p class="title">South Carolina, USA</p>
+                    <p class="title">Item Location</p>
                   </div>
                   <div>
-                    <p>eBay Money Back</p>
+                    <div class="row">
+                      <div class="icon-wrapper">
+                        <span class="ebay-red">e</span>
+                        <span class="ebay-blue">b</span>
+                        <span class="ebay-yellow">a</span>
+                        <span class="ebay-green">y</span>
+                      </div>
+                      <a href="#">+</a>
+                    </div>
+                    <p class="title">eBay Money Back</p>
                     <p>60 days, free return</p>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <section id="other-products">
+        <section id="other-products">
+          <div class="inner">
             <h6>People who viewed this item also viewed</h6>
 
             <ul class="slider">
-              <a href="#" class="arrow"><</a>
+              <a href="#" class="arrow"
+                ><i class="fas fa-angle-left blue"></i
+              ></a>
               <li>
-                <div><img src="watch.jpg" alt="picture of the watch" /></div>
                 <div>
                   <h4>Withings Activite Pop</h4>
                   <p>The new face of activity tracking</p>
-                  <p>149.95 $</p>
-                  <a href="#">BUY IT NOW</a>
+                  <p>149.95 <span>$</span></p>
+                  <a href="#" class="blue">BUY IT NOW</a>
                 </div>
               </li>
               <li>
-                <div><img src="watch.jpg" alt="picture of the watch" /></div>
                 <div>
-                  <h4>Withings Activite Pop</h4>
-                  <p>The new face of activity tracking</p>
-                  <p>149.95 $</p>
-                  <a href="#">BUY IT NOW</a>
+                  <h4>Withings Home</h4>
+                  <p>A greater sense of security</p>
+                  <p>199.95 <span>$</span></p>
+                  <a href="#" class="blue">BUY IT NOW</a>
                 </div>
               </li>
               <li>
-                <div><img src="watch.jpg" alt="picture of the watch" /></div>
                 <div>
-                  <h4>Withings Activite Pop</h4>
-                  <p>The new face of activity tracking</p>
-                  <p>149.95 $</p>
-                  <a href="#">BUY IT NOW</a>
+                  <h4>Smart Baby Monitor</h4>
+                  <p>Always near your baby</p>
+                  <p>249.95 <span>$</span></p>
+                  <a href="#" class="blue">BUY IT NOW</a>
                 </div>
               </li>
-              <a href="#" class="arrow">></a>
+              <a href="#" class="arrow"
+                ><i class="fas fa-angle-right blue"></i
+              ></a>
             </ul>
-          </section>
+          </div>
+        </section>
 
-          <section id="product-specifics">
+        <section id="product-specifics">
+          <div class="inner">
             <div class="tabs-nav">
               <nav>
                 <a href="#" class="current">Item Specifics</a>
@@ -140,11 +238,11 @@
             <div class="tabs">
               <div class="specifics">
                 <div>
-                  <p>WITHINGS</p>
+                  <h5>WITHINGS</h5>
                   <p>Brand</p>
                 </div>
                 <div>
-                  <p>ACTIVITE</p>
+                  <h5>ACTIVITE</h5>
                   <p>Model</p>
                 </div>
                 <div class="number">
@@ -154,96 +252,118 @@
               </div>
               <ul>
                 <li>
-                  <img src="url" />
+                  <div class="icon-wrapper"><i class="fas fa-tags"></i></div>
                   <p>New with Tags</p>
                   <p>Condition</p>
                 </li>
                 <li>
-                  <img src="url" />
+                  <div class="icon-wrapper"><i class="fas fa-truck"></i></div>
                   <p>USPS First Class Mail</p>
                   <p>Domestic Shipping Service</p>
                 </li>
                 <li>
-                  <img src="url" />
+                  <div class="icon-wrapper">
+                    <i class="fas fa-plane-departure"></i>
+                  </div>
                   <p>USPS First Class Mail International</p>
                   <p>International Shipping Service</p>
                 </li>
                 <li>
-                  <img src="url" />
+                  <div class="icon-wrapper"><i class="fas fa-history"></i></div>
                   <p>2-5 Business Days</p>
                   <p>Item Ship Within</p>
                 </li>
                 <li>
-                  <img src="url" />
+                  <div class="icon-wrapper"><i class="fas fa-box"></i></div>
                   <p>Factory Sealed</p>
                   <p>Packaging</p>
                 </li>
                 <li>
-                  <img src="url" />
+                  <div class="icon-wrapper"><i class="fas fa-history"></i></div>
                   <p>60 Days Money Back</p>
                   <p>Return Policy</p>
                 </li>
               </ul>
             </div>
-            <div class="blocks">
-              <div>
-                <p class="title">French design. SwissMade.</p>
-                <p>
-                  Designed in Paris, Activite is manufactured with great care in
-                  Switzerland and bears the coveted "SwissMade" label.
-                </p>
-                <p>
-                  Manufactured in Locle, within the Swiss watchmakers valley,
-                  the dials come in two colors:<br />
-                  A sleek black pattern with an orange accent and a
-                  sophisticated white face with a blue accent. Both dials
-                  feature a pair of dazzling hands.
-                </p>
+
+            <div
+              class="blocks"
+              style="background-image: url('background-image.jpeg')"
+            >
+              <div style="background-image: url('background-image1.jpeg')">
+                <div class="text-wrapper">
+                  <p class="title">French design. SwissMade.</p>
+                  <p>
+                    Designed in Paris, Activite is manufactured with great care
+                    in Switzerland and bears the coveted "SwissMade" label.
+                  </p>
+                  <p>
+                    Manufactured in Locle, within the Swiss watchmakers valley,
+                    the dials come in two colors:<br />
+                    A sleek black pattern with an orange accent and a
+                    sophisticated white face with a blue accent. Both dials
+                    feature a pair of dazzling hands.
+                  </p>
+                </div>
               </div>
-              <div>
-                <p class="title">An impenetrable case</p>
-                <p>
-                  Protected by a scratch-proof domed sapphire glass, the 5 ATM
-                  water-resistant case is made from a stainless 316L alloy steel
-                  resilient to time and corrosion.
-                </p>
+              <div
+                class="right"
+                style="background-image: url('background-image2.jpeg')"
+              >
+                <!--depending on background picture, option to align text to the right-->
+                <div class="text-wrapper">
+                  <p class="title">An impenetrable case</p>
+                  <p>
+                    Protected by a scratch-proof domed sapphire glass, the 5 ATM
+                    water-resistant case is made from a stainless 316L alloy
+                    steel resilient to time and corrosion.
+                  </p>
+                </div>
               </div>
-              <div>
-                <p class="title">Optimize your sleep</p>
-                <p>
-                  Whatever you wear to bed, accessorize with Activite. In the
-                  morning you will have a detailed picture of your night.
-                  Activite can also wake you up with a silent vibrating alarm.
-                </p>
+              <div style="background-image: url('background-image3.jpeg')">
+                <div class="text-wrapper">
+                  <p class="title">Optimize your sleep</p>
+                  <p>
+                    Whatever you wear to bed, accessorize with Activite. In the
+                    morning you will have a detailed picture of your night.
+                    Activite can also wake you up with a silent vibrating alarm.
+                  </p>
+                </div>
               </div>
-              <div>
-                <p class="title">Stop counting laps</p>
-                <p>
-                  Water resistant<br />Activite is water resistant to 50 meters.
-                </p>
-                <p>
-                  Extra silicone watch strap<br />Easily change straps when you
-                  exercise with the quick release spring bars.
-                </p>
+              <div style="background-image: url('background-image4.jpeg')">
+                <div class="text-wrapper">
+                  <p class="title">Stop counting laps</p>
+                  <p>
+                    Water resistant<br />Activite is water resistant to 50
+                    meters.
+                  </p>
+                  <p>
+                    Extra silicone watch strap<br />Easily change straps when
+                    you exercise with the quick release spring bars.
+                  </p>
+                </div>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
+
       <footer>
-        <a href="#top" class="blue">^ BACK TO TOP</a>
+        <a href="#top" class="blue"
+          ><i class="fas fa-angle-up blue"></i> BACK TO TOP</a
+        >
         <nav>
           <ul>
-            <li>About eBay</li>
-            <li>Annoucements</li>
-            <li>Community</li>
-            <li>Security Center</li>
-            <li>Resolution Center</li>
-            <li>Seller Information Center</li>
-            <li>Policies</li>
-            <li>Affiliates</li>
-            <li>Help & Contact</li>
-            <li>Site Map</li>
+            <li><a href="#">About eBay</a></li>
+            <li><a href="#">Annoucements</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Security Center</a></li>
+            <li><a href="#">Resolution Center</a></li>
+            <li><a href="#">Seller Information Center</a></li>
+            <li><a href="#">Policies</a></li>
+            <li><a href="#">Affiliates</a></li>
+            <li><a href="#">Help & Contact</a></li>
+            <li><a href="#">Site Map</a></li>
           </ul>
         </nav>
         <div>

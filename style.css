@@ -2,16 +2,24 @@ img {
   width: 100%;
 }
 * {
-  color: #555;
+  color: #999;
   font-size: 1rem;
   font-family: "Mukta", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   line-height: 1.2;
 }
 a {
   text-decoration: none;
-  color: #555;
+}
+button {
+  cursor: pointer;
+}
+button:focus,
+button:hover,
+button:active {
+  outline: none;
 }
 ul {
   list-style-type: none;
@@ -20,19 +28,18 @@ body {
   background-color: #f6ddb5;
 }
 .ebay-red {
-  color: #e53e43;
+  color: #e53e43 !important;
 }
 .ebay-green {
-  color: #88b71c;
+  color: #88b71c !important;
 }
 .ebay-yellow {
-  color: #f4b827;
+  color: #f4b827 !important;
 }
 .ebay-blue {
-  color: #0364d1;
+  color: #0364d1 !important;
 }
-.blue,
-.arrow {
+.blue {
   color: rgb(0, 132, 255);
 }
 .container {
@@ -54,28 +61,58 @@ STYLING HEADER
 }
 header {
   border-bottom: 1px solid #e4dbdb;
+  padding: 1% 0;
+}
+header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 header h1 span {
   font-size: 4rem;
   font-weight: 400;
   letter-spacing: -0.3rem;
 }
-/*==============
-STYLING MAIN 
-==================*/
-section#product {
+header input[type="search"] {
+  width: 60%;
+  border: none;
+  box-shadow: 0px 0px 4.5px 0.5px #9999991f;
+  padding: 0.25rem 0;
+}
+header #profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-image {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
+  box-shadow: 0px 0px 4.5px 0.5px #9999991f;
+}
+header #sort {
+  color: #b7de69;
+}
+/*==============================
+STYLING MAIN - SECTION PRODUCT
+==========================*/
+section#product .inner {
   border-bottom: 1px solid #e4dbdb;
   display: flex;
   justify-content: space-between;
-  padding-top: 3%;
 }
 section#product .product-images {
   width: 55%;
 }
 section#product .product-images .product-title {
-  height: 5rem;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 section#product .product-images h3 {
+  color: #555;
   text-transform: uppercase;
   font-size: 1.7rem;
 }
@@ -84,7 +121,11 @@ section#product .product-images #countdown {
   display: inline;
 }
 section#product .product-images .main-image {
+  display: flex; /* to erase the white space after the image */
   box-shadow: 0px 0px 10px 1px #9999998a;
+}
+section#product .product-images .slider {
+  margin: 7% 0 12%;
 }
 .slider {
   position: relative;
@@ -94,20 +135,32 @@ section#product .product-images .main-image {
 section#product .product-images .slider li {
   width: 20%;
   box-shadow: 0px 0px 10px 1px #9999998a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+section#product .product-images .slider li img:hover {
+  width: 150%;
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
 }
 .slider .arrow {
   position: absolute;
   top: 40%;
   background-color: white;
+  box-shadow: 0px 0px 10px 1px #9999998a;
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  line-height: 30px;
-  text-align: center;
-  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .slider .arrow:first-of-type {
   left: -15px;
+  z-index: 50;
 }
 .slider .arrow:last-of-type {
   right: -15px;
@@ -115,8 +168,229 @@ section#product .product-images .slider li {
 section#product .product-description {
   width: 40%;
 }
+section#product .olive-shop {
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e4dbdb;
+}
+section#product .olive-shop .text :nth-child(n) {
+  font-size: 0.8rem;
+}
+section#product .olive-shop .text > p:first-of-type {
+  color: #555;
+}
+section#product .olive-shop .text .follow {
+  color: #b7de69;
+}
+section#product .olive-shop .text .dot {
+  background-color: #b7de69;
+  border-radius: 50%;
+  height: 0.2rem;
+  width: 0.2rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.5rem;
+}
+section#product .olive-shop .progress {
+  display: flex;
+  align-items: center;
+}
+section#product .olive-shop .progress-bar {
+  width: 150px;
+  height: 5px;
+  background-color: red;
+  margin-right: 10px;
+}
+section#product .olive-shop #progress {
+  width: 98.5%;
+  background-color: #b7de69;
+  height: 100%;
+}
+section#product .product-description .product-details {
+  padding-top: 8%;
+}
+section#product .product-description .product-details > p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3%;
+}
+section#product .product-description .product-details p > :first-child {
+  margin-right: 3%;
+}
+section#product .product-description .product-colors button {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #e4dbdb;
+  position: relative;
+}
+section#product .product-description .product-colors button span {
+  position: absolute;
+  height: 3px;
+  width: 3px;
+  background-color: rgb(0, 132, 255);
+  border-radius: 50%;
+  bottom: -7px;
+  left: 13px;
+  display: none;
+}
+section#product .product-description .product-colors button.active span {
+  display: block;
+}
+button#white {
+  background-color: white;
+}
+button#black {
+  background-color: black;
+}
+button#blue {
+  background-color: blue;
+}
+button#red {
+  background-color: red;
+}
+button#orange {
+  background-color: orange;
+}
+button#turquoise {
+  background-color: turquoise;
+}
+section#product .product-details input[type="number"] {
+  border: none;
+  width: 3rem;
+  color: rgb(0, 132, 255);
+  box-shadow: 0px 0px 4.5px 0.5px #9999991f;
+  text-align: center;
+  padding: 0.25rem 0;
+  margin-right: 3%;
+}
+section#product .product-details .product-price-container {
+  display: flex;
+  margin: 5% 0;
+}
+section#product .product-details .product-price-container > div {
+  width: 100%;
+  background-color: white;
+  padding: 7%;
+}
+section#product .product-details .product-price-container button {
+  background-color: transparent;
+  border: none;
+}
+section#product .product-details .product-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -5px 0px 4.5px 0.5px #9999991f;
+  margin-right: 0.5%;
+}
+section#product .product-details .product-price span.blue {
+  font-size: 2rem;
+  line-height: 1;
+}
+section#product .product-details .product-price .blue + span {
+  font-size: 0.8rem;
+}
+section#product .product-details .product-price button {
+  border-bottom: 2px solid #b7de69;
+  margin-top: 7%;
+}
+section#product .product-details .product-price button span {
+  color: #b7de69;
+  padding: 0 0.5rem;
+  font-size: 0.8rem;
+}
+section#product .product-details .product-price button i {
+  color: #fff;
+  background-color: #b7de69;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+  padding: 0.3rem;
+}
+section#product .product-details .product-actions {
+  display: flex;
+  justify-content: center;
+  box-shadow: 5px 0px 4.5px 0.5px #9999991f;
+}
+section#product .product-details .product-actions div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+section#product .product-details .product-actions button {
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+}
+section#product .product-details .product-actions i {
+  font-size: 0.8rem;
+  margin-right: 0.25rem;
+}
+section#product .product-details .shipping-details {
+  display: flex;
+  flex-wrap: nowrap;
+}
+section#product .product-details .shipping-details > div {
+  width: 50%;
+  margin-right: 2%;
+}
+section#product .product-details .shipping-details .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+section#product .product-details .shipping-details .icon-wrapper {
+  border-radius: 50%;
+  background-color: #fff;
+  height: 2.75rem;
+  width: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section#product
+  .product-details
+  .shipping-details
+  .icon-wrapper
+  > :nth-child(n) {
+  color: #b7de69;
+}
+section#product .product-details .shipping-details a {
+  color: #fff;
+  background-color: #b7de69;
+  border-radius: 50%;
+  height: 0.8rem;
+  width: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.25rem;
+}
+section#product .product-details .shipping-details a.more {
+  background-color: rgb(0, 132, 255);
+  font-size: 0.7rem;
+}
+section#product .product-details .shipping-details .title {
+  color: #555;
+  font-size: 0.8rem;
+}
+section#product .product-details .shipping-details .title + p {
+  font-size: 0.8rem;
+}
+/*==============================
+STYLING MAIN - SECTION OTHER PRODUCTS
+==========================*/
+
+section#other-products {
+  margin-bottom: 5%;
+}
 section#other-products h6 {
   text-transform: uppercase;
+  color: #555;
+  margin: 5% 0 3%;
+  font-size: 1.7rem;
 }
 section#other-products .slider {
   justify-content: space-between;
@@ -124,20 +398,44 @@ section#other-products .slider {
 section#other-products li {
   width: 32.5%;
   display: flex;
+  justify-content: flex-end;
 }
 section#other-products li div {
   width: 50%;
+  padding: 5% 2% 5% 0;
 }
-section#other-products .slides li:nth-of-type(3) {
-  background-color: #fff;
+section#other-products .slider li:nth-of-type(1) {
+  background: #fff url("slide1.jpeg") no-repeat;
+  background-size: cover;
 }
-section#other-products .slides li:nth-of-type(3) {
-  background-color: rgb(235, 203, 115);
+section#other-products .slider li:nth-of-type(2) {
+  background: rgb(235, 203, 115) url("slide2.jpeg") no-repeat;
+  background-size: cover;
 }
-section#other-products .slides li:nth-of-type(3) {
-  background-color: #b7de69;
+section#other-products .slider li:nth-of-type(3) {
+  background: #b7de69 url("slide3.jpeg") no-repeat;
+  background-size: cover;
+}
+section#other-products h4 {
+  color: #555;
+}
+section#other-products li div p:first-of-type {
+  font-size: 0.75rem;
+}
+section#other-products li div p:last-of-type {
+  color: #555;
+  font-size: 1.5rem;
+  margin: 0.75rem 0;
+  font-weight: 200;
+}
+section#other-products li div p:last-of-type span {
+  color: #555;
+  font-size: 1rem;
 }
 
+/*==============================
+STYLING MAIN - SECTION PRODUCT-SPECIFICS
+==========================*/
 section#product-specifics {
   background-color: #fff;
 }
@@ -145,39 +443,115 @@ section#product-specifics .tabs-nav {
   display: flex;
   justify-content: space-between;
 }
-section#product-specifics nav a {
+section#product-specifics .tabs-nav a {
+  padding: 0.75rem;
+}
+section#product-specifics .tabs-nav nav {
+  display: flex;
+}
+section#product-specifics .tabs-nav nav a {
   color: #b7de69;
 }
 section#product-specifics nav a.current {
   background-color: #b7de69;
   color: #fff;
 }
+section#product-specifics .tabs {
+  margin: 5% 0;
+}
 section#product-specifics .tabs > :nth-child(n) {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: flex-end;
+}
+section#product-specifics .specifics {
+  margin-bottom: 3%;
+}
+section#product-specifics .specifics div {
+  margin: 0 4%;
+  text-align: center;
+}
+section#product-specifics .specifics h5 {
+  line-height: 1;
+  font-size: 2.25rem;
+  font-weight: 200;
+  color: #555;
+}
+section#product-specifics .specifics .number p:first-of-type {
+  font-size: 1.4rem;
+  font-weight: 200;
+  color: #555;
+}
+section#product-specifics .specifics p {
+  font-size: 0.9rem;
 }
 section#product-specifics li {
   width: 22%;
+  text-align: center;
+  margin-bottom: 3%;
 }
-section#product-specifics li img {
-  background-color: #b7de69;
-  width: 50px;
-  height: 50px;
+section#product-specifics li .icon-wrapper {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   border: 1px solid #e4dbdb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 3%;
+}
+section#product-specifics li .icon-wrapper i {
+  color: #b7de69;
+}
+section#product-specifics li p:nth-of-type(2) {
+  font-size: 0.75rem;
 }
 section#product-specifics .blocks {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 48%;
 }
-section#product-specifics .blocks div {
+section#product-specifics .blocks > div {
   box-shadow: 0px 0px 10px 1px #9999998a;
   width: 48%;
+  min-height: 20vw;
+  padding: 3% 2% 3% 5%;
+  margin-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
 }
-section#product-specifics .blocks div:first-of-type {
+section#product-specifics .blocks > div:first-of-type {
   width: 100%;
+  min-height: 25vw;
+}
+section#product-specifics .blocks .text-wrapper {
+  width: 60%;
+}
+section#product-specifics .blocks .right {
+  background-position: left bottom;
+}
+section#product-specifics .blocks > div:nth-of-type(4) {
+  background-size: cover;
+}
+section#product-specifics .blocks .right .text-wrapper {
+  align-self: flex-end;
+}
+section#product-specifics .blocks p.title {
+  font-size: 1.7rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+section#product-specifics .blocks p {
+  margin-bottom: 0.75rem;
 }
 /*==============
 STYLING FOOTER 
@@ -187,6 +561,16 @@ footer {
   box-shadow: 0px 0px 10px 1px #9999998a;
   text-align: center;
 }
+footer a.blue {
+  display: block;
+  padding: 1.5rem;
+}
+footer a.blue i {
+  padding: 0 0.5rem;
+}
+footer nav {
+  margin-bottom: 2%;
+}
 footer nav ul {
   display: flex;
   justify-content: center;
@@ -194,14 +578,20 @@ footer nav ul {
   padding: 0 10%;
 }
 footer nav ul li {
+  padding: 0.75rem 1rem;
+}
+footer nav ul li a {
   color: #fff;
-  padding: 20px;
 }
 footer div {
   width: 50%;
   margin: 0 auto;
   border-top: 1px solid #666;
+  padding: 2% 0;
 }
 footer p {
   color: #999;
+}
+footer div p span {
+  font-size: 1.5rem;
 }
